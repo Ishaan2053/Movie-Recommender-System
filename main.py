@@ -24,8 +24,8 @@ add_bg_from_url()
 
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
+    "Test line 1",
+    ("A", "B", "C")
 )
 
 # Using "with" notation
