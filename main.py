@@ -2,6 +2,24 @@ import pickle
 import streamlit as st
 import requests
 
+st.set_page_config (layout="wide")
+
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://th.bing.com/th/id/R.bcced8f468edf702446c698f480d551a?rik=D7ESot1lxVKqyQ&riu=http%3a%2f%2fwww.deltaangelgroup.com%2fwp-content%2fuploads%2f2014%2f07%2fMovie-curtains.jpg&ehk=3L9CT0CddsDqDo80KzWc7bj0mqf7n1aarS8AZOWorFY%3d&risl=&pid=ImgRaw&r=0");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
+
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
     data = requests.get(url)
@@ -36,7 +54,7 @@ selected_movie = st.selectbox(
 
 if st.button('Show Recommendation'):
     recommended_movie_names,recommended_movie_posters = recommend(selected_movie)
-    col1, col2, col3, col4, col5 = st.beta_columns(5)
+    col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         st.text(recommended_movie_names[0])
         st.image(recommended_movie_posters[0])
@@ -53,3 +71,4 @@ if st.button('Show Recommendation'):
     with col5:
         st.text(recommended_movie_names[4])
         st.image(recommended_movie_posters[4])
+
