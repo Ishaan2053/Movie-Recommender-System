@@ -31,6 +31,28 @@ def add_bg_from_url():
 
 add_bg_from_url()
 
+##Sidebar
+with st.sidebar:
+    add_radio = st.radio(
+        "Test Radio Buttons",
+        ("Button 1", "Button 2")
+    )
+
+    add_text = st.write(
+        "New to MovieFind? Sign up now and save your recommendation history!"
+    )
+
+    add_button = st.button(
+       "Sign Up" 
+    )
+
+    add_text = st.write(
+        "Already a member? Log in"
+    )
+
+    add_button = st.button(
+       "Login" 
+    )
 
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(
