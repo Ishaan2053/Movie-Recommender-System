@@ -1,8 +1,26 @@
 import pickle
 import streamlit as st
 import requests
+import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide")
+
+def add_bg_from_url():
+    st.markdown(
+        f"""
+         <style>
+         .stApp {{
+             background-image: url("https://wallpaperaccess.com/full/4840775.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+        unsafe_allow_html=True
+    )
+
+
+add_bg_from_url()
 
 add_selectbox = st.sidebar.selectbox(
     "Test line 1",
@@ -40,8 +58,10 @@ def recommend(movie):
 
     return recommended_movie_names, recommended_movie_posters
 
-
-st.header('Movie Recommender System')
+st.header('') 
+st.header('') 
+st.title('MovieFind Movie Recommender System')
+st.subheader('The One-Click Solution to finding your next watch!')
 movies = pickle.load(open('movie_list.pkl', 'rb'))
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
