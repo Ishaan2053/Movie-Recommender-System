@@ -5,6 +5,15 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title='MovieFind', page_icon=None, layout='wide', initial_sidebar_state='collapsed')
 
+hide_st_style = """
+            <style>
+            #mainmenu {visibility: hidden;}
+            header {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)  
+
 def add_bg_from_url():
     st.markdown(
         f"""
@@ -21,17 +30,6 @@ def add_bg_from_url():
 
 
 add_bg_from_url()
-
-add_selectbox = st.sidebar.selectbox(
-    "Test line 1",
-    ("A", "B", "C")
-)
-
-with st.sidebar:
-    add_radio = st.radio(
-        "Test Radio Buttons",
-        ("Button 1", "Button 2")
-    )
 
 
 def fetch_poster(movie_id):
@@ -91,3 +89,37 @@ if st.button('Show Recommendations'):
     with col5:
         st.text(recommended_movie_names[4])
         st.image(recommended_movie_posters[4])
+
+## Footer
+footer = """<style>
+a:link , a:visited{
+color: white;
+background-color: transparent;
+text-decoration: underline;
+transition: all 0.5s;
+}
+
+a:hover,  a:active {
+color: aqua;
+background-color: transparent;
+transition: all 0.5s;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: dark gray;
+color: white;
+text-align: center;
+}
+
+</style>
+<div class="footer">
+  <div class="container-fluid">
+<p>Made with 🔥 by <strong>Ishaan</strong> and <strong>Keshav Sharma</strong></p>
+<p><a href="https://github.com/Ishaan2053/MovieFind-Movie-Recommender-System" target="_blank">View This Project on GitHub</a></p>
+</div></div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
