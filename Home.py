@@ -2,8 +2,9 @@ import pickle
 import streamlit as st
 import requests
 import streamlit.components.v1 as components
+import time
 
-st.set_page_config(page_title='MovieFind', page_icon=None, layout='wide', initial_sidebar_state='collapsed')
+st.set_page_config(page_title='MovieFind', page_icon='🎬', layout='wide', initial_sidebar_state='collapsed')
 
 hide_st_style = """
             <style>
@@ -34,8 +35,8 @@ add_bg_from_url()
 ##Sidebar
 with st.sidebar:
     add_radio = st.radio(
-        "Test Radio Buttons",
-        ("Button 1", "Button 2")
+        "Select Theme (Non Functional)",
+        ("Light", "Dark")
     )
 
     add_text = st.write(
@@ -87,7 +88,7 @@ similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
-    "Made by Keshav sharma & Ishaan :zap: :zap: ",
+    "Type in your movie or select one from the drop down list📃",
     movie_list
 )
 
@@ -117,7 +118,6 @@ footer = """<style>
 a:link , a:visited{
 color: white;
 background-color: transparent;
-text-decoration: underline;
 transition: all 0.5s;
 }
 
