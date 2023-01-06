@@ -4,31 +4,11 @@ import requests
 
 st.set_page_config(layout="wide")
 
-
-def add_bg_from_url():
-    st.markdown(
-        f"""
-         <style>
-         .stApp {{
-             background-image: url("https://wallpaperaccess.com/full/8351209.gif");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         </style>
-         """,
-        unsafe_allow_html=True
-    )
-
-
-add_bg_from_url()
-
-# Using object notation
 add_selectbox = st.sidebar.selectbox(
     "Test line 1",
     ("A", "B", "C")
 )
 
-# Using "with" notation
 with st.sidebar:
     add_radio = st.radio(
         "Test Radio Buttons",
@@ -53,7 +33,7 @@ def recommend(movie):
     recommended_movie_names = []
     recommended_movie_posters = []
     for i in distances[1:6]:
-        # fetch the movie poster
+
         movie_id = movies.iloc[i[0]].movie_id
         recommended_movie_posters.append(fetch_poster(movie_id))
         recommended_movie_names.append(movies.iloc[i[0]].title)
