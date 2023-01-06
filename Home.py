@@ -3,6 +3,7 @@ import streamlit as st
 import requests
 import streamlit.components.v1 as components
 import time
+from streamlit_extras.app_logo import add_logo
 
 st.set_page_config(page_title='MovieFind', page_icon='🎬', layout='wide', initial_sidebar_state='collapsed')
 
@@ -14,6 +15,8 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)  
+
+add_logo("")
 
 def add_bg_from_url():
     st.markdown(
@@ -28,7 +31,6 @@ def add_bg_from_url():
          """,
         unsafe_allow_html=True
     )
-
 
 add_bg_from_url()
 
