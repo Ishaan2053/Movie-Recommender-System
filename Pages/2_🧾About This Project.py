@@ -1,6 +1,23 @@
 import streamlit as st
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='About This Project', page_icon=None, layout='wide', initial_sidebar_state='collapsed')
+
+def add_bg_from_url():
+    st.markdown(
+        f"""
+         <style>
+         .stApp {{
+             background-image: url("https://wallpapercave.com/wp/wp6354033.jpg");
+             background-attachment: fixed;
+             background-size: 100%
+         }}
+         </style>
+         """,
+        unsafe_allow_html=True
+    )
+
+
+add_bg_from_url()
 
 st.title("Welcome to our Movie Recommender System!")
 st.image("https://media.giphy.com/media/w1OBpBd7kJqHrJnJ13/giphy.gif",

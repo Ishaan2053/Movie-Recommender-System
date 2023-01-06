@@ -3,16 +3,16 @@ import streamlit as st
 import requests
 import streamlit.components.v1 as components
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='MovieFind', page_icon=None, layout='wide', initial_sidebar_state='collapsed')
 
 def add_bg_from_url():
     st.markdown(
         f"""
          <style>
          .stApp {{
-             background-image: url("https://wallpaperaccess.com/full/4840775.jpg");
+             background-image: url("https://wallpapercave.com/wp/wp8226566.png");
              background-attachment: fixed;
-             background-size: cover
+             background-size: cover 
          }}
          </style>
          """,
@@ -71,7 +71,7 @@ selected_movie = st.selectbox(
     movie_list
 )
 
-if st.button('Show Recommendation'):
+if st.button('Show Recommendations'):
     recommended_movie_names, recommended_movie_posters = recommend(
         selected_movie)
     col1, col2, col3, col4, col5 = st.columns(5)
