@@ -84,7 +84,11 @@ similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 ##Movie dropdown list
 movie_list = movies['title'].values
-selected_movie = st.selectbox(
+
+col1, col2 = st.columns(2)
+
+with col1:
+ st.selectbox(
     "Type in your movie or select one from the drop down list📃",
     movie_list
 )
@@ -122,6 +126,7 @@ a:link , a:visited{
 color: white;
 background-color: transparent;
 transition: all 0.5s;
+text-decoration: none;
 }
 
 a:hover,  a:active {
@@ -135,23 +140,25 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: #161616;
+background-color: #161619;
 color: white;
 text-align: center;
+border-top: 2px solid #FF4B4B;
 }
 
-p {
+#footertext {
+    margin: 5px;
     transition: all 0.3s ease-in-out;
 }
-p:hover {
+#footertext:hover {
     color: #FF4B4B;
 }
 
 </style>
 <div class="footer">
   <div class="container-fluid">
-<p>Made with 🔥 by <strong>Ishaan</strong> and <strong>Keshav Sharma</strong><br>
-<a href="https://github.com/Ishaan2053/MovieFind-Movie-Recommender-System" target="_blank">View This Project on GitHub</a></p>
+  <p id="footertext"><a href="https://github.com/Ishaan2053/MovieFind-Movie-Recommender-System" target="_blank">View This Project on GitHub</a></p>
+<p id="footertext">Made with 🔥 by <strong>Ishaan</strong> and <strong>Keshav Sharma</strong></p>
 </div></div>
 """
 st.markdown(footer,unsafe_allow_html=True)
