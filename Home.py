@@ -88,7 +88,7 @@ movie_list = movies['title'].values
 col1, col2 = st.columns(2)
 
 with col1:
- st.selectbox(
+ selected_movie = st.selectbox(
     "Type in your movie or select one from the drop down list📃",
     movie_list
 )
