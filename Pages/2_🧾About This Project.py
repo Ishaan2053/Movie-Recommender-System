@@ -1,4 +1,5 @@
 import streamlit as st
+import webbrowser
 
 st.set_page_config(page_title='About This Project', page_icon=None, layout='wide', initial_sidebar_state='collapsed')
 
@@ -28,26 +29,15 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 add_bg_from_url()
 
 with st.sidebar:
-    add_radio = st.radio(
-        "Select Theme (Non Functional)",
-        ("Light", "Dark")
+
+    add_text = st.write (
+        "Want to drop a review or feedback? Spotted a bug? Reach out to us through this survery form!"
     )
 
-    add_text = st.write(
-        "New to MovieFind? Sign up now and save your recommendation history!"
-    )
+    url = 'Pages\Survey_Form.html'
 
-    add_button = st.button(
-       "Sign Up" 
-    )
-
-    add_text = st.write(
-        "Already a member? Log in"
-    )
-
-    add_button = st.button(
-       "Login" 
-    )
+    if st.button('Survey Form'):
+     webbrowser.open_new_tab(url)
 
 st.title("Welcome to our Movie Recommender System!")
 st.image("https://media.giphy.com/media/w1OBpBd7kJqHrJnJ13/giphy.gif",
@@ -59,3 +49,37 @@ st.write("To power our system, we use a dataset called the TMDB 5000 Movie Datas
 st.write("One of the key features of our system is its use of content-based filtering. This type of filtering is based on the idea that users are more likely to enjoy movies that are similar to those they have already watched and rated highly. To implement this, we analyze the characteristics of each movie in our dataset and compare them to the preferences of our users. This allows us to provide recommendations that are tailored specifically to each user's tastes.")
 st.write("To make our system even more powerful, we have integrated it with Streamlit. Streamlit is an open-source framework that allows us to easily create interactive web applications. With Streamlit, we are able to present our movie recommendations in a visually appealing and user-friendly way, making it easy for users to browse and select movies that interest them.")
 st.write("So whether you're a fan of action, romance, comedy, or any other genre, our movie recommendation system has you covered. We hope you enjoy using our service and discovering new and exciting films!")
+
+## Footer
+footer = """<style>
+a:link , a:visited{
+color: white;
+background-color: transparent;
+transition: all 0.5s;
+}
+
+a:hover,  a:active {
+color: aqua;
+background-color: transparent;
+transition: all 0.5s;
+}
+
+.footer {
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #161616;
+color: white;
+text-align: center;
+}
+
+
+</style>
+<div class="footer">
+  <div class="container-fluid">
+<p>Made with 🔥 by <strong>Ishaan</strong> and <strong>Keshav Sharma</strong><br>
+<a href="https://github.com/Ishaan2053/MovieFind-Movie-Recommender-System" target="_blank">View This Project on GitHub</a></p>
+</div></div>
+"""
+st.markdown(footer,unsafe_allow_html=True)

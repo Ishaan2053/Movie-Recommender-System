@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MovieFind Survey Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="Survey_Form.CSS">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="https://github.com/Ishaan2053/MovieFind-Movie-Recommender-System"
+                        target="_blank">View MovieFind on GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <h1 id="title"> <i>MovieFind User Feedback Survey Form</i> </h1>
+    <p id="description"> Please fill out this form to let us know of your experience with using MovieFind! </p>
+
+    <form id="survey-form">
+        <div class="form-text">Fields marked with * are required</div><br>
+        <div class="mb-3">
+            <label for="Inputname" class="form-label">Name*</label>
+            <input type="text" class="form-control" id="name" aria-describedby="NameHelp"
+                placeholder="Enter your full name here" required>
+            <div class="form-text">Enter your First Name twice if you officialy only use a first name</div>
+        </div>
+        <div class="mb-3">
+            <label for="InputEmail" class="form-label">Email Address*</label>
+            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
+                placeholder="Example: abc@gmail.com" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+            <label for="ProblemRadio" class="form-label">Did you Find any problems while using MovieFind?*</label><br><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Yes I did Find a Problem</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">No, Everything's Good</label>
+            </div>
+            <br>
+            <br>
+            <label for="Datalist" class="form-label">What kind of problems did you encounter while using
+                MovieFind?*</label><br>
+            <input class="form-control" list="datalistOptions" id="DataList" placeholder="Click to view categories" required>
+            <datalist id="datalistOptions">
+                <option value="Poor Performance">
+                <option value="UI Bug">
+                <option value="Incorrect Data">
+                <option value="Unexpected Behaviour">
+            </datalist>
+        </div><br>
+        <div class="mb-3">
+            <label for="description_area" class="form-label" >Please provide description of the encountered problem*</label>
+            <textarea class="form-control" id="description_area" rows="3" placeholder="Describe the issue in detail" required></textarea>
+            <div class="form-text">Don't include any personal information</div>
+        </div>
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Include images/videos to describe your issue (optional)</label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+            <div class="form-text">Accepted formats include: jpg, jpeg, png, avi, mp4, mkv. Max filesize: 20MB</div>
+          </div>
+         
+        
+        <label for="customRange" class="form-label">How satisfied you are with MovieFind?</label>
+        <input type="range" class="form-range" min="0" max="6" id="customRange">
+        <div class="form-text"><pre>Very Dissatisfied                                 Neutral                                  Very Satisfied</pre> </div>
+
+        <div class="mb-3">
+            <label for="Textarea1" class="form-label">Want to point out something we missed?</label>
+            <textarea class="form-control" id="Textarea1" rows="3" placeholder="Feel free to provide additional feedback here!" ></textarea>
+            <div class="form-text">Your feedback will be used to improve MovieFind</div><br>
+        </div>
+
+        <div class="mb-3 form-check">
+
+            <input type="checkbox" class="form-check-input" id="Check1">
+            <label class="form-check-label" for="Check1">I understand that the information shared is true to the
+                best of my knowlege.</label>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+    <footer id="footer">
+        <div class="container-fluid">
+            <!-- social media icons -->
+            <a href="https://github.com/Ishaan2053" target="_blank"><i class="fab fa-github fa-2x footer-icons"></i></a>
+            <a href="https://twitter.com/Ishaan2053" target="_blank"><i
+                    class="fab fa-twitter fa-2x footer-icons"></i></a>
+            <a href="https://www.linkedin.com/in/ishaan2053/" target="_blank"><i
+                    class="fab fa-linkedin fa-2x footer-icons"></i></a>
+            <br>
+            <p>Made with 🔥 by @Ishaan2053</p><br>
+        </div>
+    </footer>
+</body>
+
+</html>

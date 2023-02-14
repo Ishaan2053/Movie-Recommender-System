@@ -1,0 +1,162 @@
+/* Background */
+html, body {
+    background-image: url(https://wallpaperaccess.com/full/8406764.gif);
+    background-repeat: repeat;
+    background-size: 100%;
+    display: flexbox;
+}
+
+/* Navigation bar */
+.navbar-light .navbar-nav .nav-link {
+    color:rgb(248, 91, 91);
+    transition: all 0.3s;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0px 10px 0px 10px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color:rgb(244, 152, 152);
+    box-shadow: 0 0 5px rgb(168, 44, 44);
+}
+
+
+
+/* footer styling */
+#footer {
+    background-color:rgb(25, 26, 37);
+    text-align: center;
+    color: #c0afbf;
+    position: relative;
+    bottom: 0;
+    min-height: 13vh;
+    width: 100%;
+}
+
+#footer p {
+    margin-bottom: 0;
+    display: inline;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer p:hover {
+    color: rgb(248, 91, 91);
+    cursor: default;
+}
+
+.footer-icons {
+    color: rgb(168, 44, 44);
+    margin: 0.35rem;
+    transition: all 0.3s ease-out;
+}
+
+.footer-icons:hover {
+    color: rgb(244, 152, 152);
+}
+
+#footer sub {
+    color: rgb(248, 91, 91);
+    margin-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #c0afbf;
+    
+  }
+ 
+  p{
+    font-family: Tahoma;
+    text-align: center;
+    color: #c0afbf;
+  }
+  
+  textarea {
+    margin: 10px auto;
+    border: 3px;
+  }
+  
+  input {
+    display: block;
+    margin: 5px 0px;
+  }
+
+
+#survey-form {
+    position: relative;
+    overflow: auto;
+    overflow-wrap: normal;
+    color: rgb(244, 152, 152);
+    border-radius: 12px;
+    margin: 5vh 25vw 5vh 25vw;
+    padding: 20px;  
+    z-index: 1;
+  }
+  
+  #survey-form:after{
+   content: '';
+   background: inherit; 
+   padding: 20px;
+   position: absolute;
+   left: -25px;
+   right: 0;
+   top: -25px;  
+   bottom: 0;
+   box-shadow: inset 0 0 0 400px rgba(255,255,255,0.05);
+   filter: blur(10px);
+   z-index: -1;
+  }
+
+  #form-check-input .check1 {
+    background-color: rgb(248, 91, 91);
+    color: rgb(248, 91, 91);
+  }
+
+  #survey-form .btn-primary {
+    display: flex;
+    justify-content: center;
+    margin: 0 25vw 0 25w;
+    background-color: rgb(168, 44, 44);
+    border-color: rgb(168, 44, 44);
+    
+  }
+
+  #survey-form .btn-primary:hover {
+    text-align: center;
+  
+    border-color: rgb(248, 91, 91); 
+    box-shadow: 0 0 10px rgb(168, 44, 44);
+  }
+
+  #Textarea1{
+    background-color: rgb(25, 26, 37);
+    color: #c0afbf;
+  }
+
+  #formFileMultiple {
+    background-color: rgb(25, 26, 37);
+    color: #c0afbf;
+  }
+
+  #description_area {
+    background-color: rgb(25, 26, 37);
+    color: #c0afbf;
+  }
+
+  #DataList{
+    background-color: rgb(25, 26, 37);
+  }
+
+  #inlineRadio1, #inlineRadio2, #Check1  {
+    background-color: rgb(25, 26, 37);
+  }
+
+  #InputEmail {
+    background-color: rgb(25, 26, 37);
+    color: #c0afbf;
+  }
+
+  #name {
+    background-color: rgb(25, 26, 37);
+    color: #c0afbf;
+  }
